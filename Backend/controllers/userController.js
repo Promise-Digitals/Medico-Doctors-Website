@@ -110,7 +110,7 @@ const getProfile = async (req, res) => {
         
         const {userId} = req.body
 
-        const userData = userModel.findById(userId).select('-password')
+        const userData = await userModel.findById(userId).select('-password')
 
         res.json({
             success: true,
