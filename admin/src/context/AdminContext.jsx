@@ -93,6 +93,7 @@ const AdminContextProvider = (props) => {
 
             if (data.success) {
                 setDashdata(data.dashData)
+                console.log(data.dashData)
             }else{
                 toast.error(data.message)
             }
