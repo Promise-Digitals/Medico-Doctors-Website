@@ -187,7 +187,7 @@ const doctorDashboard = async (req, res) => {
     try {
         const {docId} = req.body
 
-        const appointments = await.appointmentModel.find({docId})
+        const appointments = await appointmentModel.find({docId})
 
         let earnings = 0
 
@@ -209,7 +209,7 @@ const doctorDashboard = async (req, res) => {
             earnings,
             appointments: appointments.length,
             patients: patients.length,
-            latestAppointment: appointments.reverse().alice(0, 5)
+            latestAppointments: appointments.reverse().slice(0, 5)
         }
 
         res.json({
