@@ -23,7 +23,7 @@ const App = () => {
 
   return aToken || dToken ? (
     <div className='bg-[#f8f9fd]'>
-      <ToastContainer />
+      <ToastContainer theme='colored' hideProgressBar={true} closeOnClick={true} />
       <Navbar />
       <div className='flex items-start'>
         <Sidebar />
